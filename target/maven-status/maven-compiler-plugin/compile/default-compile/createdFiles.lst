@@ -1,7 +1,0 @@
-org\spring\springboot\dao\MusicDao.class
-org\spring\springboot\Application.class
-org\spring\springboot\service\impl\MusicServiceImpl.class
-org\spring\springboot\controller\MusicController.class
-org\spring\springboot\service\MusicService.class
-org\spring\springboot\domain\Music.class
-org\spring\springboot\swagger\Swagger2.class
