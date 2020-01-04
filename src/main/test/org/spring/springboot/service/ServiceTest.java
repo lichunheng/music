@@ -3,8 +3,10 @@ package org.spring.springboot.service;
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
 import org.spring.springboot.BaseTest;
-import org.spring.springboot.domain.City;
+import org.spring.springboot.domain.Music;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.List;
 
 /**
  * @author yyb
@@ -12,21 +14,11 @@ import org.springframework.beans.factory.annotation.Autowired;
  */
 public class ServiceTest extends BaseTest {
     @Autowired
-    private CityService cityService ;
+    private MusicService musicService ;
 
     @Test
-    public void addCity(){
-        City city = new City();
-        city.setCityName("南京");
-        city.setDescription("三大火炉");
-        city.setProvinceId(5214L);
-        int i = cityService.addCity(city);
-        System.out.println(i);
-    }
-
-    @Test
-    public void findByCityName(){
-        City shenzhen = cityService.findCityByName("shenzhen");
-        System.out.println(JSON.toJSON(shenzhen));
+    public void findBySongName(){
+        List<Music> song = musicService.findBySongName("打工贵族");
+        System.out.println(JSON.toJSON(song));
     }
 }
