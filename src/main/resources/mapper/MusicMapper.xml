@@ -20,6 +20,7 @@
     </resultMap>
 
     <sql id="Base_Column_List">
+        id,
 		singer_name,
 		song_name,
 		subtitle,

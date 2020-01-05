@@ -3,12 +3,13 @@ package org.spring.springboot.domain;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public class Music implements Serializable {
-    private Integer id;
+@Document(collection = "music")
+public class MusicMongo {
+    @Id
+    private String id;
     private String singerName;
     private String songName;
     private String subtitle;
@@ -21,17 +22,17 @@ public class Music implements Serializable {
     private Integer songId;
     private String songMid;
     private String songUrl;
-    private String hotComments;
+    private List<Map<String, String>> hotComments;
     private String lyric;
 
-    public Music() {
+    public MusicMongo() {
     }
 
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -131,11 +132,11 @@ public class Music implements Serializable {
         this.songUrl = songUrl;
     }
 
-    public String getHotComments() {
+    public List<Map<String, String>> getHotComments() {
         return hotComments;
     }
 
-    public void setHotComments(String hotComments) {
+    public void setHotComments(List<Map<String, String>> hotComments) {
         this.hotComments = hotComments;
     }
 

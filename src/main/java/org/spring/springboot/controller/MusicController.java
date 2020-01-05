@@ -19,7 +19,7 @@ import java.util.List;
 @RestController("/api/music")
 @Api(value = "music信息管理")
 public class MusicController {
-    public Logger logger = LogManager.getLogger(MusicController.class);
+    private Logger logger = LogManager.getLogger(MusicController.class);
 
     @Autowired
     private MusicService musicService;
